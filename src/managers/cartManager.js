@@ -32,6 +32,7 @@ const getCartById = async (cid) =>{
 const addProductCart = async (cid, pid) =>{
         await getCarts();
         const cart =  await getCartById(cid);
+        console.log(cart)
         // Encontrar si el producto ya existe en el carrito
         const existingProduct = cart.products.find(p => p.product === pid);
         if (existingProduct) {

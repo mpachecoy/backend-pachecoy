@@ -25,11 +25,17 @@ router.get("/products/:pid", async (req, res) => {
 });
 
 router.put("/products/:pid", async (req, res) => {
-    const { pid } = req.params;
-    const body = req.body;
-    const product = await productManage.updateProduct(pid, body);
+    try {
+        const { pid } = req.params;
+        const body = req.body;
+        const product = await productManage.updateProduct(pid, body);
+        if(!product) return res.status(404).json({ status: "error", msg:"Prodcuto no encontrado"});
 
-    res.send(product);
+        res.status(200).json({status:"ok", product}); 
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ status: "error", msg: "Error interno del servidor"});
+    }
 });
 
 router.post("/products", checkProductData, async (req, res) =>{

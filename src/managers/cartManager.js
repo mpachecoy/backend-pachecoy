@@ -48,17 +48,6 @@ const addProductCart = async (cid, pid) =>{
         await fs.promises.writeFile(path, JSON.stringify(carts, null, 2));    
         return cart;
 
-    // await getCarts();
-    // const cart =  await getCartById(cid);
-    // const product = {
-    //     product: pid, 
-    //     quantity: 1
-    // }
-
-    // cart.products.push(product);
-    // console.log(carts)
-    // await fs.promises.writeFile(path, JSON.stringify(cart));
-    // return cart;   
 };
 
 const deleteCart= async (cid) => {

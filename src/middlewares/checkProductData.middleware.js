@@ -1,11 +1,10 @@
 export const checkProductData = async (req, res, next) => {
     try {
         const { title, description, price, thumbnail, code, stock, category, status } = req.body;
-        const newProduct = {
+        const requiredFields = {
             title,
             description,
             price,
-            thumbnail,
             code,
             stock, 
             category, 
@@ -13,7 +12,7 @@ export const checkProductData = async (req, res, next) => {
         }
 
         //Verifico que el producto tenga todas las propiedades.
-        if(Object.values(newProduct).includes(undefined)) {
+        if(Object.values(requiredFields).includes(undefined)) {
             return res.status(400).json({ status: "error", msg: "Todos los campos son obligatorios"});
         }
         next(); //Permite que continue la ejecucion del endpoint

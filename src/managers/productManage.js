@@ -36,12 +36,15 @@ const addProduct = async (product) =>{
 }
 
 //Leer productos
-const getProducts = async (limit ) =>{
+const getProducts = async (limit) =>{
     try {
         const fileJson = await fs.promises.readFile(path, "utf-8");
         const parseFile = JSON.parse(fileJson);
         products = parseFile || [];
 
+        if (limit && typeof limit === 'number' && limit > 0) {
+            return products.slice(0, limit);
+        }
         return products;
     } catch (error) {
         console.log(`${error}`)        

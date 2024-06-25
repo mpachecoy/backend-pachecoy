@@ -12,6 +12,7 @@ const getCarts = async ()=>{
 };
 
 const createCart = async () => {
+    await getCarts();
     const newCart = {
         id: uuid(),
         products: [],
@@ -37,7 +38,6 @@ const addProductCart = async (cid, pid) =>{
         if (existingProduct) {
             existingProduct.quantity += 1;
         } else {
-
             const newProduct = { 
                 product: pid, 
                 quantity: 1 

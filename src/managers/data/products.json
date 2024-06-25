@@ -1,1 +1,45 @@
-[{"id":"617a5fde-b7c3-4aeb-89d4-f8e2aa33ecb4","title":"Producto 1","description":"Descripción del producto 1","price":1900,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABC127","stock":200,"category":"Comestible","status":true},{"id":"b0130934-e1e9-4c71-9e67-90373d400ce5","title":"Producto 2","description":"Descripción del producto 2","price":200,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABC127","stock":10,"category":"Comestible","status":true},{"id":"9cd071f5-03bb-41ea-b0c5-6870f1dd1fff","title":"Producto 3","description":"Descripción del producto 3","price":500,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png","code":"ABC127","stock":10,"category":"Comestible","status":true},{"id":"06ec25de-e9f6-4181-8ec4-e45fe202baad","title":"Producto 4","description":"Descripción del producto 4","price":400,"code":"ABC127","stock":10,"category":"Comestible","status":true}]
+[
+    {
+        "id": "617a5fde-b7c3-4aeb-89d4-f8e2aa33ecb4",
+        "title": "Producto 1",
+        "description": "Descripción del producto 1",
+        "price": 1900,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
+        "code": "ABC127",
+        "stock": 200,
+        "category": "Comestible",
+        "status": true
+    },
+    {
+        "id": "b0130934-e1e9-4c71-9e67-90373d400ce5",
+        "title": "Producto 2",
+        "description": "Descripción del producto 2",
+        "price": 200,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
+        "code": "ABC127",
+        "stock": 10,
+        "category": "Comestible",
+        "status": true
+    },
+    {
+        "id": "9cd071f5-03bb-41ea-b0c5-6870f1dd1fff",
+        "title": "Producto 3",
+        "description": "Descripción del producto 3",
+        "price": 500,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/bus-vehicle-transport-school-128.png",
+        "code": "ABC127",
+        "stock": 10,
+        "category": "Comestible",
+        "status": true
+    },
+    {
+        "id": "06ec25de-e9f6-4181-8ec4-e45fe202baad",
+        "title": "Producto 4",
+        "description": "Descripción del producto 4",
+        "price": 400,
+        "code": "ABC127",
+        "stock": 10,
+        "category": "Comestible",
+        "status": true
+    }
+]

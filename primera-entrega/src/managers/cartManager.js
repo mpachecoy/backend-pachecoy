@@ -2,6 +2,7 @@ import fs from "fs";
 import { v4 as uuid } from "uuid";
 
 let carts = [];
+
 const path = "./src/managers/data/carts.json";
 
 const getCarts = async ()=>{
@@ -45,7 +46,7 @@ const addProductCart = async (cid, pid) =>{
             cart.products.push(newProduct);
         }
 
-        await fs.promises.writeFile(path, JSON.stringify(carts, null, 2));    
+        await fs.promises.writeFile(path, JSON.stringify(carts));    
         return cart;
 
 };

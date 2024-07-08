@@ -1,5 +1,6 @@
 import { Router } from "express";
 import cartManager from "../managers/cartManager.js";
+import productManage from "../managers/productManage.js";
 
 const router = Router();
 
@@ -31,9 +32,15 @@ router.post("/carts/:cid/product/:pid", async (req, res) => {
     try {
         const { cid, pid } = req.params;
 
+        if (!cid || !pid) return res.status(400).json({ status: "error", msg: "Faltan parámetros cid o pid" }) 
+            
+        const product = await productManage.getProductsById(pid);
+        if(!product) return res.status(404).json({ status: "error", msg:"Prodcuto no encontrado"});
+
         const cart = await cartManager.addProductCart(cid, pid);
+        console.log(cart);
         if(!cart) return res.status(404).json( {status: "error", msg: "Carrito no encontrado"} );
-        
+  
         res.status(201).json({status: "ok", cart});
     } catch (error) {
         console.log(error);

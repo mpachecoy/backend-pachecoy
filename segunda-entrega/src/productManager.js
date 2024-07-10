@@ -19,8 +19,6 @@ const addProduct = async (product) => {
     status: true,
   };
 
-
-
   products.push(newProduct);
 
   await fs.promises.writeFile(pathFile, JSON.stringify(products));

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import productManager from "../productManager.js";
-import { checkProductData } from "../middleware/checkProductData.middleware.js";
+
 
 const router = Router();
 
@@ -29,7 +29,7 @@ router.get("/:pid", async (req, res) => {
   }
 });
 
-router.post("/", checkProductData, async (req, res) => {
+router.post("/", async (req, res) => {
   const body = req.body;
   try {
     const product = await productManager.addProduct(body);

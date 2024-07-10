@@ -24,7 +24,6 @@ const httpServer = app.listen(PORT, () => {
   console.log(`Server on port ${PORT}`);
 });
 
-// Configuración de socket
 
 export const io = new Server(httpServer);
 
